@@ -1,0 +1,72 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #1e1f26;
+}
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 300px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  min-height: 70vh;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #ff9800;
+}
+.form-check-input:checked {
+  background-color: #ffa726 !important;
+  border-color: #ffa726 !important;
+}
+.custom_button {
+  color: #ffffff;
+  background-color: #ffa726 !important;
+  border: none;
+}
+.custom_button:hover {
+  background-color: #ffa726 !important;
+}
+
+.CircularProgressbar-path {
+  stroke: #ff9800 !important;
+}
+.CircularProgressbar-trail {
+  stroke: rgb(218, 215, 215) !important;
+}
+.CircularProgressbar-text {
+  fill: #ff9800 !important;
+}
+.CircularProgressbar-background {
+  fill: #ff9800 !important;
+}
+
+.bi-trash3 {
+  font-size: 25px;
+  color: red;
+}
+.bi-trash3 {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
