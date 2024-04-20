@@ -4,7 +4,7 @@ const Titulo = () => {
       <div className="row justify-content-center mt-3 mb-5">
         <div className="col-md-12">
           <h1 className="text-center fw-bold">
-            Todo List - Cómo usar React Circular Progressbar
+            TODO List App en React con useReducer
             <hr />
           </h1>
         </div>

@@ -8,9 +8,14 @@ import "./assets/styles/toogle.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { useTodoReducer } from "./reducers/reducerTodo"; // Importa useTodoReducer en lugar de useTodoContext
+// Importando mi custom hooks
+//import useTaskActions from "./hooks/useTaskActions";
+
+import { useTodoReducer } from "./reducers/reducerTodoTask";
 
 function App() {
+  //const { borrarTarea } = useTaskActions();
+
   const { state, dispatch, completedTasksCount, totalTasksCount } = useTodoReducer(); // Usa useTodoReducer en lugar de useTodoContext
   const { tasks, newTask, defaultStatus } = state;
 
@@ -26,7 +31,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(newTask);
+
     if (newTask.trim() === "") {
       if (!toast.isActive("Toastify__toast")) {
         toast.error("La tarea no puede estar vacía", {
@@ -45,6 +50,7 @@ function App() {
   };
 
   // Función para cambiar el estado de completación de una tarea
+
   const toggleTaskCompletion = (taskId) => {
     if (!toast.isActive("Toastify__toast")) {
       toast.success("Tarea completada correctamente", {
@@ -67,7 +73,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <ToastContainer />
       <Titulo />
       <div className="row justify-content-center mt-5">
@@ -94,7 +100,7 @@ function App() {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
