@@ -1,8 +1,6 @@
-// Definición de tipos de acción
+// Definimos los tipos de acciones que pueden ocurrir en nuestra lista de tareas
 export const TYPES = {
   CREAR_TAREA: "ADD_TASK",
-  SET_NEW_TASK: "SET_NEW_TASK",
   TOGGLE_TASK: "TOGGLE_TASK_COMPLETION",
-  SET_DEFAULT_STATUS: "SET_DEFAULT_STATUS",
   DELETE_TASK: "DELETE_TASK",
 };
