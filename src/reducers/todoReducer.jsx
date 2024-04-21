@@ -6,7 +6,11 @@ export const todoReducer = (state, action) => {
   if (action.type === TYPES.CREAR_TAREA) {
     return [
       ...state,
-      { id: state.length + 1, text: action.payload.text, completed: action.payload.completed },
+      {
+        id: state.length + 1,
+        text: action.payload.text,
+        completed: action.payload.completed,
+      },
     ];
   } else if (action.type === TYPES.TOGGLE_TASK) {
     return state.map((task) =>

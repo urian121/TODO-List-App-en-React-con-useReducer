@@ -6,12 +6,14 @@ import TodoForm from "./components/TodoForm";
 import TodoListTask from "./components/TodoListTask";
 import ProgressBar from "./components/ProgressBar";
 
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Mi custom hook para manejar las acciones
 import { useTodoActions } from "./hooks/useTodoActions";
 
 function TodoApp() {
+  // Extrae las acciones de useTodoActions
   const { tasks, addTask, toggleTaskCompletion, deleteTask } = useTodoActions();
   const [newTask, setNewTask] = useState("");
   const [defaultStatus, setDefaultStatus] = useState(false);
@@ -27,10 +29,12 @@ function TodoApp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (newTask.trim() === "") {
-      return;
+      toast.error("La  tarea no puede estar vacía");
+      return; // Debes retornar aquí si la tarea está vacía
     }
 
     addTask(newTask, defaultStatus);
+    setDefaultStatus(false); // Restablece el estado de defaultStatus antes de limpiar newTask
     setNewTask("");
   };
 

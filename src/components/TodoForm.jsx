@@ -4,7 +4,7 @@ const TodoForm = ({ onSubmit, onInputChange, onCheckboxChange, newTask, defaultS
       <input
         type="text"
         className="form-control"
-        defaultValue={newTask} // Cambiar value por defaultValue
+        value={newTask} // Usar value en lugar de defaultValue
         onChange={onInputChange}
         placeholder="Nueva Tarea"
       />
@@ -14,7 +14,7 @@ const TodoForm = ({ onSubmit, onInputChange, onCheckboxChange, newTask, defaultS
           type="checkbox"
           className="form-check-input"
           id="defaultStatusCheckbox"
-          defaultChecked={defaultStatus} // Cambiar checked por defaultChecked
+          checked={defaultStatus} // Usar checked en lugar de defaultChecked
           onChange={onCheckboxChange}
         />
         <label className="form-check-label float-start" htmlFor="defaultStatusCheckbox">
